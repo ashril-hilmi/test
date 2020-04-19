@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="eng">
 
+<head>
+ <title>selection</title>
+ <meta charset="utf-8">
+ 
+ <style>
+ *{
+   border:2px solid #dedede;
+   padding:15px;
+   margin:15px;
+ }
+ 
+ html{
+  margin:0;
+  padding:0;
+ }
+ 
+ body{
+  max-width:600px;
+  margin:30px auto;
+  font-family:sans-serif;
+  color:#333;
+ }
+ </style>
+</head>
+<body>
+
+<h1 id="judul">hello world</h1>
+
+<div id="container">
+ 
+ <section id="a">
+  <p class="p1">paragraf 1</p>
+  <a href="http://google.com">link ashril</a>
+  <p class="p2">paragraf 2</p>
+  <p class="p3">paragraf 3</p>
+ </section>
+
+ <section id="b">
+  <p>paragraf 4</p>
+   <ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+   </ul>
+ </section>
+</div>
+
+
+<script>
+//dom selection
+//getElementById()
+//mengembalikan element
+const judul=document.getElementById('judul');
+judul.style.color='white';
+judul.style.background='salmon';
+judul.innerHTML='Ashril Hilmi'; //mengubah tulisan tanpa menyentuh struktur html
+
+
+//getElementsByTagName()
+//mengembalikan html collection
+//bersifat array
+const p =document.getElementsByTagName('p');
+for(let i=0; i<p.length; i++) {
+p[i].style.background='red';
+p[i].style.color='white';
+}
+
+//mengubah html collection menjadi elements
+const h1=document.getElementsByTagName('h1')[0];
+h1.style.fontSize='50px';
+
+//getElementsByClassName() 
+//mengembalikan html collection
+//bersifat array
+const p1 =document.getElementsByClassName('p1')[0];
+p1.style.color='black';
+p1.innerHTML='Diubah oleh JavaScript';
+
+
+//tagName
+//a
+const a=document.getElementsByTagName('a')[0];
+a.style.textDecoration='none';
+</script>
+</body>
+</html>
